@@ -1,12 +1,12 @@
 import math.Matrix
+import math.solveEquationSystemByJordanElimination
 
 fun main() {
-    val matrix = Matrix(
-        arrayOf(
-            arrayOf(1, 2, 3),
-            arrayOf(4, 5, 6),
-            arrayOf(7, 8, 9)
-        )
+    val matrix = arrayOf(
+        arrayOf(2.0, -3.0),
+        arrayOf(-4.0, 3.0)
     )
-    println(matrix)
+    println(Matrix(matrix))
+    val resultMatrix = solveEquationSystemByJordanElimination(matrix)
+    println(Matrix(resultMatrix))
 }
